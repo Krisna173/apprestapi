@@ -1,14 +1,18 @@
-var mysql = require('mysql');
+const mysql = require('mysql');
 
-//buat koneksi database
-const conn = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:'realtime'
+const connection = mysql.createConnection({
+  host: 'localhost',   // Sesuaikan dengan konfigurasi MySQL
+  user: 'root',        // Sesuaikan dengan user MySQL
+  password: '',        // Sesuaikan dengan password
+  database: 'realtime'
 });
 
-conn.connect((err)=>{
-    if(err) throw err;
-    console.log('mysql terkoneksi');
+connection.connect((err) => {
+  if (err) {
+    console.error('Error connecting to MySQL:', err);
+    return;
+  }
+  console.log('MySQL connected');
 });
+
+module.exports = connection;
