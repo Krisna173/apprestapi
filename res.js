@@ -9,7 +9,3 @@ exports.ok = function(value, res){
     res.json(data);
     res.end;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> d834461 (menambahkan kode server)
