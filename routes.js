@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(app){
+export default function(app) {
     var jsonku = require('./controller');
     
     app.route('/')
