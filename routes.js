@@ -1,6 +1,6 @@
 'use strict';
 
-export default function(app) {
+module.exports = function(app) {
     var jsonku = require('./controller');
     
     app.route('/')
@@ -11,4 +11,4 @@ export default function(app) {
 
     app.route('/tampil/:id')
         .get(jsonku.tampilberdasarkanid);
-}
+};
